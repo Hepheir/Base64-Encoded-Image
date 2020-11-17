@@ -29,6 +29,11 @@ window.addEventListener('paste', evt => {
          * Document for Clipboard API:
          * - https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
          */
+        for (let i=0; i<data.length; i++) {
+            if (data[i].types[0] == "image/png") {
+                // TODO: Encode found image into Base64
+            }
+        }
     });
 
     // TODO: test on other browsers
