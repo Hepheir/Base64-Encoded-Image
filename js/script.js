@@ -18,5 +18,18 @@ function openFile() {
 }
 
 window.addEventListener('paste', evt => {
-    // TODO
+    // works on Chrome
+    navigator.clipboard.read().then(data => {
+        /* data: 
+         * - Array of items,
+         *   each of the items are
+         *   `{types: ["image/png", ...], ...}`
+         *   with prototype methods such as `getType()`
+         * 
+         * Document for Clipboard API:
+         * - https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API
+         */
+    });
+
+    // TODO: test on other browsers
 })
