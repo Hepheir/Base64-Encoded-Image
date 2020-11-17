@@ -31,7 +31,11 @@ window.addEventListener('paste', evt => {
          */
         for (let i=0; i<data.length; i++) {
             if (data[i].types[0] == "image/png") {
-                // TODO: Encode found image into Base64
+                data[i].getType("image/png")
+                       .then(blob => blob.arrayBuffer())
+                       .then(arraybuffer => {
+                            output.innerText = arrayBuffer2Base64(arraybuffer);
+                        });
             }
         }
     });
