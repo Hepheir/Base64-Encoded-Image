@@ -16,3 +16,7 @@ function openFile() {
     };
     input.click();
 }
+
+window.addEventListener('paste', evt => {
+    // TODO
+})
