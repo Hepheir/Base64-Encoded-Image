@@ -1,0 +1,15 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 16px;
+    background-color: #efefef;
+}
+
+textarea {
+    width: 100%;
+    height: 720px;
+}
