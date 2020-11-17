@@ -1,3 +1,7 @@
+function arrayBuffer2Base64(arraybuffer) {
+    return 'data:image/png;base64,' + base64ArrayBuffer(arraybuffer);
+}
+
 function openFile() {
     var input = document.createElement("input");
     input.type = "file";
@@ -7,8 +11,7 @@ function openFile() {
         var reader = new FileReader();
         reader.readAsArrayBuffer(file);
         reader.onload = () => {
-            var bufferArray = reader.result;
-            output.innerText = 'data:image/png;base64,' + base64ArrayBuffer(bufferArray);
+            output.innerText = arrayBuffer2Base64(reader.result);
         };
     };
     input.click();
