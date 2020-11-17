@@ -19,13 +19,26 @@
 </head>
 
 <body>
-    <p>
-        <label for="button">Open Image (.png)</label>
-        <button id="button" onclick="openFile()">Open</button>
-    </p>
-    <p>
-        <textarea id="output"></textarea>
-    </p>
+    <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <section>
+            <div id="drag-n-drop"></div>
+            <textarea id="output">OUTPUT</textarea>
+        </section>
+
+        <article>
+            <p>
+                <label for="button">Open Image (.png)</label>
+                <button id="button" onclick="openFile()">Open</button>
+            </p>
+        </article>
+    </main>
+
+    <footer>
+    </footer>
 
     <script src="js/base64ArrayBuffer.js"></script>
     <script src="js/script.js"></script>
